@@ -7,7 +7,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = duckoff
 
-duckoff_FILES = Tweak.c
+duckoff_FILES = Tweak.m
 duckoff_FRAMEWORKS = CydiaSubstrate
 duckoff_CFLAGS = -fobjc-arc
 
