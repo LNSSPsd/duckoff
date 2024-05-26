@@ -1,4 +1,11 @@
-#! /bin/sh
+#!/bin/sh
 
 echo Reloading daemon
-killall -TERM kbd 2>/dev/null || true
+if launchctl unload -wF /System/Library/LaunchDaemons/com.apple.TextInput.kbd.plist 2>/dev/null; then
+  launchctl load -wF /System/Library/LaunchDaemons/com.apple.TextInput.kbd.plist 2>/dev/null || true
+else
+  # Elucubratus launchctl may fail, fallback to killall
+  killall -TERM kbd 2>/dev/null || true
+fi
+
+exit 0

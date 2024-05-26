@@ -1,9 +1,15 @@
 Package: com.lns.duckoff
-Name: duckoff
+Name: DuckOff
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: Unleash your keyboard to type swear words!
 Maintainer: Ruphane
 Author: Ruphane
 Section: Tweaks
+Pre-Depends: launchctl, coreutils | shell-cmds
 Depends: mobilesubstrate (>= 0.9.5000)
+Description: Unleash your keyboard to type swear words!
+ This tweak allows the iOS shipped IM to sugget insulting
+ words while word predictions enabled.
+ .
+ After installing this tweak, the NLM blocking mesures
+ are disabled, thus curse words can be suggested by kbd.
