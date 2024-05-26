@@ -7,8 +7,12 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = duckoff
 
+duckoff_CFLAGS = -fobjc-arc
+ifeq ($(THEOS_PACKAGE_SCHEME),rootless)
+	duckoff_CFLAGS += -DIS_ROOTLESS=1
+endif
+
 duckoff_FILES = Tweak.m
 duckoff_FRAMEWORKS = CydiaSubstrate
-duckoff_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
