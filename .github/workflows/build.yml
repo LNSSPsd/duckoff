@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: brew install make xz ldid
 
+      - name: Copy CydiaSubstrate.h
+        run: cp theos/vendor/lib/CydiaSubstrate.framework/Headers/CydiaSubstrate.h theos/vendor/include/substrate.h
+
       - name: Build package (rootless)
         run: THEOS=theos gmake clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
 
@@ -72,6 +75,9 @@ jobs:
 
       - name: Install dependencies
         run: brew install make xz ldid
+
+      - name: Copy CydiaSubstrate.h
+        run: cp theos/vendor/lib/CydiaSubstrate.framework/Headers/CydiaSubstrate.h theos/vendor/include/substrate.h
 
       - name: Build package (rootful)
         run: THEOS=theos gmake clean package FINALPACKAGE=1

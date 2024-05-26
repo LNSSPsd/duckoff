@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo Reloading daemon
+killall -TERM kbd 2>/dev/null || true

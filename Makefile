@@ -1,4 +1,4 @@
-TARGET := iphone:clang:latest:7.0
+TARGET := iphone:clang:latest:13.0
 ARCHS := arm64 arm64e
 INSTALL_TARGET_PROCESSES = kbd
 
