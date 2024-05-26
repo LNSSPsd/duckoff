@@ -21,6 +21,8 @@ static void __duckoff_main_construct(void) {
 		return;
 	}
 	void *is_never_suggestible=MSFindSymbol(img, "__ZNK25TICandQualityFilterPolicy20is_never_suggestibleERKN2KB4WordE");
+	if(!is_never_suggestible)
+		is_never_suggestible=MSFindSymbol(img, "__ZNK2KB20WordSuggestionPolicy20is_never_suggestibleERKNS_4WordEPNS_6StringE");
 	if(!is_never_suggestible) {
 		FILE *err_file=fopen("/tmp/kbd.err.log", "a");
 		if(err_file) {
