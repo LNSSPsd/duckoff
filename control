@@ -5,7 +5,7 @@ Architecture: iphoneos-arm
 Maintainer: Ruphane
 Author: Ruphane
 Section: Tweaks
-Pre-Depends: launchctl, coreutils | shell-cmds
+Pre-Depends: launchctl, coreutils | shell-cmds, firmware (>= 13.0)
 Depends: mobilesubstrate (>= 0.9.5000)
 Description: Unleash your keyboard to type swear words!
  This tweak allows the iOS shipped IM to sugget insulting
