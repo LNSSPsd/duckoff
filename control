@@ -1,0 +1,9 @@
+Package: com.lns.duckoff
+Name: duckoff
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Unleash your keyboard to type swear words!
+Maintainer: Ruphane
+Author: Ruphane
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
